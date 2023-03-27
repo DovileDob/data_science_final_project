@@ -1,21 +1,23 @@
 <h1><b>Project Name</b></h1>
 
 
-<h2><b>Table of Contents</b></h2>
-•	Introduction
-•	Dataset
-•	Used Libraries
-•	Notebooks in use
-•	Data Cleaning and Preprocessing
-•	Model Building and Evaluation
+<h2><b>Table of Contents</h2></b>
+<b>•	Introduction</b><br>
+<b>•	Dataset</b><br>
+<b>•	Used Libraries</b><Br>
+<b>•	Notebooks in use</b><Br>
+<b>•	Data Cleaning and Preprocessing</b><Br>
+<b>•	Model Building and Evaluation</b><br>
 
 <h2><b>Introduction</b></h2>
 The project aims to use personal data to discover the best machine learning model that can identify the right article category
-Dataset
+ 
+ 
+ 
+ 
+<h2><b>Dataset<h2></b>
 
-
-
-<h2><b>Dataset structure:</b></h2>
+<h3><b>Dataset structure:</b></h3>
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=624
  style='width:468.0pt;margin-left:-.15pt;border-collapse:collapse'>
  <tr style='height:15.75pt'>
@@ -141,7 +143,9 @@ Dataset
   </td>
  </tr>
 </table>
+ 
 keyword_id and keyword_name has 7 unique values and these following amounts of articles in a sample data.:
+ 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none'>
  <tr>
@@ -244,10 +248,11 @@ keyword_id and keyword_name has 7 unique values and these following amounts of a
   </td>
  </tr>
 </table>
-
-File example: data/Kam_tema_sample_1
-I used bigger dataset uploaded to google drive:
-https://drive.google.com/drive/folders/11-4ZQv4eUTusCNIscl1SEy6ui_FyXs8T?usp=sharing
+File example: data/Kam_tema_sample_1<br>
+ <p></p>
+I used bigger dataset uploaded to google drive:<br>
+https://drive.google.com/drive/folders/11-4ZQv4eUTusCNIscl1SEy6ui_FyXs8T?usp=sharing<br>
+ 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none'>
  <tr>
@@ -461,70 +466,76 @@ In the share drive there is also data that can be used for small predictions:
 </table>
 File example: data/Kam_predict_sample_1
 
-<h2></b>Used Libraries<b></h2>
+<h2></b>Used Libraries</b></h2>
 
-matplotlib
-seaborn
-googletrans
-langdetect
-sklearn
-pandas
-numpy
-wordcloud
-nltk
-spaCy
-bs4
+matplotlib<br>
+seaborn<br>
+googletrans<br>
+langdetect<br>
+sklearn<br>
+pandas<br>
+numpy<br>
+wordcloud<br>
+nltk<br>
+spaCy<br>
+bs4<br>
 
-<h2></b>Notebooks in use<b></h2>
-Data_Science_final_projecy_(spaCy) .ipynb – using spaCy vectorizer for later predictions
-Data_Science_final_project (cv and tf-idf).ipynb – using spaCy for lemmatizing and later CountVectorizer and TfidfVectorizer for vectorization and predictions
+<h2></b>Notebooks in use</b></h2>
+Data_Science_final_projecy_(spaCy) .ipynb – using spaCy vectorizer for later predictions<br>
+Data_Science_final_project (cv and tf-idf).ipynb – using spaCy for lemmatizing and later CountVectorizer and TfidfVectorizer for vectorization and predictions<br>
 
 
-<h2></b>Data Cleaning and Preprocessing<b></h2>
-For data cleaning using these functions: 
-lower(text)
-BeautifulSoup.remove_html_tags(text)
-special_char(text)
-slice(stop=10000)
-langdetect.detect_lang(text)
-googletrans.translate_text(text, dest_lang)
-remove_stopwords(text)
+<h2></b>Data Cleaning and Preprocessing</b></h2>
+<b>BEFORE CLEANING</b><br>
+![before_cleaning](spacy_vect_images/Not_cleaned_data.png)<br>
+For data cleaning using these functions: <br>
+lower(text)<br>
+BeautifulSoup.remove_html_tags(text)<br>
+special_char(text)<br>
+slice(stop=10000)<br>
+langdetect.detect_lang(text)<br>
+googletrans.translate_text(text, dest_lang)<br>
+remove_stopwords(text)<br>
 
-<h2></b>Model Building and Evaluation<b></h2>
 
-Used 3 vectorizers and 1 lemmatizer:
-spaCy lemmatizer -> CountVectorizer
-spaCy lemmatizer -> TfidfVectorizer
-spaCy vectorizer
-Built 3 simple models (Logistic Regression, Random Forest Classifier, Decision Tree Classifier) for each vectorizer
+<b>After CLEANING</b><Br>
+![after_cleaning](spacy_vect_images/Cleaned_data.png)<Br>
 
-The results each reaced:
+<h2></b>Model Building and Evaluation</b></h2>
+
+Used 3 vectorizers and 1 lemmatizer:<br>
+spaCy lemmatizer -> CountVectorizer<br>
+spaCy lemmatizer -> TfidfVectorizer<br>
+spaCy vectorizer<br>
+Built 3 simple models (Logistic Regression, Random Forest Classifier, Decision Tree Classifier) for each vectorizer<br>
+
+The results each reached:<br>
 <b>CountVectorizer-> Logistic Regression</b>
 ![lr_cv](cv_tfidf_images/lr_prediction_heatmap_cv.png)
 <br>
 <b>CountVectorizer-> Random Forest Classifier</b>
- ![lr_cv](cv_tfidf_images/rdfprediction_heatmap_cv.png)
+ ![rf_cv](cv_tfidf_images/rdfprediction_heatmap_cv.png)
 <br>
 <b>CountVectorizer-> Decision Tree Classifier</b>
-  ![lr_cv](cv_tfidf_images/dt_prediction_heatmap_cv.png)
+  ![dt_cv](cv_tfidf_images/dt_prediction_heatmap_cv.png)
 <br>
 
 <b>TfidfVectorizer -> Logistic Regression</b>
-  ![lr_cv](cv_tfidf_images/lr_prediction_heatmap_tfidf.png)
+  ![lr_tfidf](cv_tfidf_images/lr_prediction_heatmap_tfidf.png)
 <br>
 <b>TfidfVectorizer -> Random Forest Classifier</b>
-  ![lr_cv](cv_tfidf_images/rdfprediction_heatmap_tfidf.png)
+  ![rf_tfidf](cv_tfidf_images/rdfprediction_heatmap_tfidf.png)
 <br>
 <b>TfidfVectorizer -> Decision Tree Classifier</b>
-  ![lr_cv](cv_tfidf_images/dt_prediction_heatmap_tfidf.png)
+  ![dt_tfidf](cv_tfidf_images/dt_prediction_heatmap_tfidf.png)
 <br>
  
 
 <b>spaCy vectorizer-> Logistic Regression</b>
-   ![lr_cv](spacy_vect_images/lr_prediction_heatmap.png)<br>
+   ![lr_spacy](spacy_vect_images/lr_prediction_heatmap.png)<br>
 <b>spaCy vectorizer-> Random Forest Classifier</b>
- ![lr_cv](spacy_vect_images/rf_prediction_heatmap.png)<br>
+ ![rf_spacy](spacy_vect_images/rf_prediction_heatmap.png)<br>
 <b>spaCy vectorizer-> Decision Tree Classifier</b>
- ![lr_cv](spacy_vect_images/dt_prediction_heatmap.png)<br>
+ ![dt_spacy](spacy_vect_images/dt_prediction_heatmap.png)<br>
 .
 
