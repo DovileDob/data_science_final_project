@@ -486,8 +486,6 @@ Data_Science_final_project (cv and tf-idf).ipynb – using spaCy for lemmatizing
 
 
 <h2></b>Data Cleaning and Preprocessing</b></h2>
-<b>BEFORE CLEANING</b><br>
-![](spacy_vect_images/Not_cleaned_data.png)<br>
 For data cleaning using these functions: <br>
 lower(text)<br>
 BeautifulSoup.remove_html_tags(text)<br>
@@ -498,8 +496,11 @@ googletrans.translate_text(text, dest_lang)<br>
 remove_stopwords(text)<br>
 
 
-<b>After CLEANING</b><Br>
+<b>Before cleaning</b><Br>
+![after_cleaning](spacy_vect_images/Not_cleaned_data.png)<Br>
+<b>After cleaning</b><br>
 ![after_cleaning](spacy_vect_images/Cleaned_data.png)<Br>
+
 
 <h2></b>Model Building and Evaluation</b></h2>
 
