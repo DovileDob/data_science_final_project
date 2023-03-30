@@ -250,8 +250,7 @@ keyword_id and keyword_name has 7 unique values and these following amounts of a
 </table>
 File example: data/Kam_tema_sample_1<br>
  <p></p>
-I used bigger dataset uploaded to google drive:<br>
-https://drive.google.com/drive/folders/11-4ZQv4eUTusCNIscl1SEy6ui_FyXs8T?usp=sharing<br>
+For my work I used bigger dataset:<br>
  
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none'>
