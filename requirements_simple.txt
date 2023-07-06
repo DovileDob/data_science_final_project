@@ -116,7 +116,6 @@ googledrivedownloader==0.4
 googletrans==4.0.0rc1
 graphviz==0.20.1
 greenlet==2.0.2
-grpcio==1.51.3
 grpcio-status==1.48.2
 gspread==3.4.2
 gspread-dataframe==3.0.8
